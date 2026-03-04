@@ -1,7 +1,7 @@
 # Project-Gaia
 Universal Guardian for Human Life - An Open Source Non-Punitive Safety Standard
 Project Gaia: A Universal Guardian for Human Life
-📜 THE GAIA PACT: A STATEMENT OF INCORRUPTIBILITY
+ THE GAIA PACT: A STATEMENT OF INCORRUPTIBILITY
 I, the creator of Project Gaia, solemnly declare before the global community:
 
 Not for Sale: This project is a gift to humanity. It cannot be bought, licensed exclusively, or suppressed by any private interest.
