@@ -44,3 +44,22 @@ No Cloud/No Logs: No data is sent to external servers or authorities.
 Non-Punitive: Gaia is a protector, not an informant. It never reports the user.
 
 Join the Mission: We are looking for experts in Computer Vision, Biomedical Engineering, and CAN-Bus protocols to make this a global reality.
+
+Phase A: The Guardian's Breath (Core Logic)
+The current version (gaia_guardian.py) implements the Initial Learning Phase:
+
+Auto-Calibration: Upon startup, Gaia monitors the driver for 30 seconds to establish a unique physiological baseline.
+
+Non-Punitive Monitoring: Uses GSR (Galvanic Skin Response) to detect stress, fatigue, or chemical anomalies.
+
+Safe Shelter (Camp Mode): If anomalies are detected, Gaia doesn't report you—it protects you by suggesting rest or inhibiting ignition.
+
+ Quick Start (Raspberry Pi)
+# 1. Clone the repository
+git clone https://github.com/Freearelife/Project-Gaia.git
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Launch the Guardian
+python gaia_guardian.py
