@@ -15,51 +15,7 @@ Open Source Forever: This project is protected by the GNU GPL v3 License. It bel
 "May this code be my legacy, and may my integrity be the guardian of your safety."
 
 
+Project Gaia v2: The Ethical Switch
+Focus Corrente: Sistema di prevenzione accensione basato su idoneità fisica (Alcol/Sostanze/Fatica) e modalità "Safe Shelter" (Camp Mode).
+Target: Hardware Open Source a basso costo (< 50€).
 
-
-🛠️ Technical Roadmap
-1. Hardware Stack (Low-Cost & Open)
-The goal is to keep the total component cost under $100 USD to ensure universal accessibility.
-
-Processor: Raspberry Pi 4/5 or Arduino Portenta H7 (Local AI processing).
-
-Biometric Sensor: Capacitive fingerprint sensor + GSR (Galvanic Skin Response) for chemical/alcohol detection via perspiration.
-
-Vision System: Infrared (IR) Camera for driver monitoring (eyelid and gaze tracking).
-
-Vehicle Interface: CAN-Bus Module (e.g., MCP2515) for safe communication with the car's ECU.
-
-2. Software Logic (The Guardian Flow)
-Phase A (Pre-Start): Identity + Sobriety check. If the driver is unfit, the ignition is inhibited.
-
-Phase B (Support): The vehicle offers "Camp Mode" (safe shelter with climate control) or assists in calling a Taxi/Ride-share.
-
-Phase C (Emergency): In case of a sudden medical crisis (heart attack/overdose) while driving, the AI secures the car at the roadside at 5-10 km/h and contacts emergency services.
-
-3. Privacy by Design
-Edge Computing: All biometric analysis occurs locally within the car's hardware.
-
-No Cloud/No Logs: No data is sent to external servers or authorities.
-
-Non-Punitive: Gaia is a protector, not an informant. It never reports the user.
-
-Join the Mission: We are looking for experts in Computer Vision, Biomedical Engineering, and CAN-Bus protocols to make this a global reality.
-
-Phase A: The Guardian's Breath (Core Logic)
-The current version (gaia_guardian.py) implements the Initial Learning Phase:
-
-Auto-Calibration: Upon startup, Gaia monitors the driver for 30 seconds to establish a unique physiological baseline.
-
-Non-Punitive Monitoring: Uses GSR (Galvanic Skin Response) to detect stress, fatigue, or chemical anomalies.
-
-Safe Shelter (Camp Mode): If anomalies are detected, Gaia doesn't report you—it protects you by suggesting rest or inhibiting ignition.
-
- Quick Start (Raspberry Pi)
-# 1. Clone the repository
-git clone https://github.com/Freearelife/Project-Gaia.git
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Launch the Guardian
-python gaia_guardian.py
