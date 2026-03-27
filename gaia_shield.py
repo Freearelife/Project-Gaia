@@ -1,39 +1,47 @@
 import time
 
 # --- CONFIGURATION ---
-# The threshold for triggering the safety lock (0.0 to 1.0)
 SAFETY_THRESHOLD = 0.7  
-# Required seconds for initial biometric/sensor calibration
 CALIBRATION_TIME = 15 
 
+def get_vehicle_speed():
+    """
+    Placeholder: In a real scenario, this reads from GPS or CAN-Bus.
+    Returns speed in km/h.
+    """
+    return 0.0  # Simulating a stationary vehicle
+
 def read_sensor_data():
-    """
-    Placeholder for reading physical sensors (GSR, Alcohol, or Pulse).
-    Currently simulating a 'Safe/Sober' reading (0.1).
-    """
-    # In the future, this will interface with GPIO pins
+    """Simulating biometric sensor reading (0.0 to 1.0)"""
     return 0.1 
 
 def main():
-    print("🛡️ Project Gaia v2: Initializing Ethical Shield...")
-    time.sleep(2)
+    print("🛡️ Project Gaia v2: System Check...")
     
-    print(f"🔍 Monitoring driver status ({CALIBRATION_TIME} seconds)...")
-    # Simulation of the data acquisition phase
-    time.sleep(CALIBRATION_TIME)
+    # 1. READ VEHICLE SPEED FIRST
+    current_speed = get_vehicle_speed()
     
-    current_status = read_sensor_data()
+    if current_speed > 5.0:
+        # SAFETY OVERRIDE: If the car is moving, Gaia MUST NOT interfere with ignition/engine
+        print(f"✅ VEHICLE IN MOTION ({current_speed} km/h). Gaia is in Passive Monitoring Mode.")
+        print("🛡️ Safety Override: Ignition Lock DISABLED for driver safety.")
+        return # Exit the safety check to prevent accidental shutdown
+
+    # 2. IF STATIONARY, PROCEED WITH FITNESS CHECK
+    print(f"🔍 Vehicle Stationary. Analyzing driver status ({CALIBRATION_TIME}s)...")
+    time.sleep(2) # Simulating processing
+    
+    fitness_level = read_sensor_data()
     
     print("-" * 40)
-    if current_status > SAFETY_THRESHOLD:
-        print("⚠️ STATUS: DRIVER FITNESS NOT DETECTED.")
-        print("🔒 ACTION: Ignition Inhibited. Activating 'Camp Mode'...")
-        # LOGIC: Send signal to Relay to KEEP OPEN (Engine OFF)
+    if fitness_level > SAFETY_THRESHOLD:
+        print("⚠️ STATUS: FITNESS NOT DETECTED.")
+        print("🔒 ACTION: Ignition Inhibited. 'Camp Mode' suggested.")
     else:
-        print("✅ STATUS: DRIVER FIT FOR TRAVEL.")
-        print("🔓 ACTION: Ignition Relay Closed. Safe journey, Captain.")
-        # LOGIC: Send signal to Relay to CLOSE (Engine ON)
+        print("✅ STATUS: DRIVER FIT.")
+        print("🔓 ACTION: Ignition Relay Closed. Ready to go!")
     print("-" * 40)
 
 if __name__ == "__main__":
     main()
+   
