@@ -15,7 +15,10 @@ Open Source Forever: This project is protected by the GNU GPL v3 License. It bel
 "May this code be my legacy, and may my integrity be the guardian of your safety."
 
 
-Project Gaia v2: The Ethical Switch
-Focus Corrente: Sistema di prevenzione accensione basato su idoneità fisica (Alcol/Sostanze/Fatica) e modalità "Safe Shelter" (Camp Mode).
-Target: Hardware Open Source a basso costo (< 50€).
+Key Goals:
 
+Universal Accessibility: Designed for low-cost, off-the-shelf open hardware (e.g., Raspberry Pi Pico, Arduino, standard sensors).
+
+Privacy by Design: Local processing only. No cloud, no logs, no reporting.
+
+Human-Centric: Protecting the driver, not punishing them.
