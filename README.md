@@ -1,24 +1,23 @@
-# Project-Gaia
-Universal Guardian for Human Life - An Open Source Non-Punitive Safety Standard
-Project Gaia: A Universal Guardian for Human Life
- THE GAIA PACT: A STATEMENT OF INCORRUPTIBILITY
-I, the creator of Project Gaia, solemnly declare before the global community:
+#  Project-Gaia: The Universal Guardian
+**"The Silence of Protection."** An Open Source, non-punitive safety standard designed to protect human life.
 
-Not for Sale: This project is a gift to humanity. It cannot be bought, licensed exclusively, or suppressed by any private interest.
+##  The Gaia Pact: Statement of Incorruptibility
+1. **Not for Sale:** This project is a gift to humanity. It cannot be bought or suppressed.
+2. **Public Refusal:** Wealth will never be prioritized over the safety of strangers.
+3. **The "Four Lives" Vow:** Dedicated to those lost to avoidable road tragedies.
+4. **Open Source Forever:** Protected by the **GNU GPL v3 License**.
 
-Public Refusal: If any corporation or entity offers wealth to privatize or hide this technology, this document serves as my formal and public refusal. I choose the safety of strangers over personal profit.
+##  Core Logic: The "Pre-Start" Integrity Gate
+Project-Gaia follows a strict **No-Stall Policy** to ensure driver safety:
+* **Stationary (0 km/h):** Gaia acts as a gatekeeper. It analyzes biometric and chemical data (GSR/Perspiration). If impairment (Alcohol/Drugs/Distress) is detected, the ignition is inhibited.
+* **In Motion (> 0 km/h):** To prevent mechanical accidents or engine stalling, Gaia switches to **Passive Monitoring**. It will NEVER interfere with vehicle dynamics while driving. Control remains 100% with the human pilot.
 
-The "Four Lives" Vow: I carry out this mission in memory of those lost to avoidable road tragedies. My wealth is measured in lives saved, not in a bank account.
+##  Repository Structure
+* `gaia_shield.py`: The core logic for ignition inhibition and safety protocols.
+* `requirements.txt`: Python dependencies (e.g., `python-can`, `adafruit-ads1x15`).
+* `LICENSE`: GNU General Public License v3.0.
 
-Open Source Forever: This project is protected by the GNU GPL v3 License. It belongs to the world. It cannot be reclaimed or locked away.
-
-"May this code be my legacy, and may my integrity be the guardian of your safety."
-
-
-Key Goals:
-
-Universal Accessibility: Designed for low-cost, off-the-shelf open hardware (e.g., Raspberry Pi Pico, Arduino, standard sensors).
-
-Privacy by Design: Local processing only. No cloud, no logs, no reporting.
-
-Human-Centric: Protecting the driver, not punishing them.
+##  Quick Start
+1. Clone the repository: `git clone https://github.com/Freearelife/Project-Gaia.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the Shield: `python gaia_shield.py`
